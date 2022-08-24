@@ -33,6 +33,29 @@ class LinkedList:
 			print("key = " + str(current.getKey()) + ", value = " + str(current.getValue()))
 			current = current.getNext()
 		return
+	def remove(self, item):
+		#case front item (covers only item and head)
+		if item == self.head:
+			head = head.getNext()
+			return	
+		current = self.head
+		prev
+		after
+		delNode
+		while current.getNext() is not None:
+			prev = current
+			delNode = current.getNext()
+			after = current.getNext().getNext()
+			if delNode() == item:
+				break;
+			current = current.getNext()
+		#case not found
+		if delNode is None:
+			return
+		#found
+		prev.setNext(after)
+		delNode = None
+			
 
 LENGTH = 3		
 
@@ -43,6 +66,7 @@ for i in range(LENGTH):
 	#a.append(Node(i, i*i))
 	LL.append(Node(i, i*i))
 LL.print()
+
 	
 
 	
