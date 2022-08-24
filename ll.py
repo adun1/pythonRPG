@@ -14,7 +14,6 @@ class Node:
 		self.next = next
 		return
 		
-		
 class LinkedList:
 	def __init__(self):
 		self.head = None
@@ -39,9 +38,6 @@ class LinkedList:
 			self.head = self.head.getNext()
 			return	
 		current = self.head
-		#prev
-		#after
-		#delNode
 		while current.getNext() is not None:
 			prev = current
 			delNode = current.getNext()
@@ -64,28 +60,4 @@ class LinkedList:
 			current = current.getNext()
 		return None
 	
-			
 
-LENGTH = 3		
-
-LL = LinkedList()
-
-a = []
-for i in range(LENGTH):
-	#a.append(Node(i, i*i))
-	LL.append(Node(i, i*i))
-
-#debugging
-LL.print()
-LL.remove(LL.findNode(0))
-LL.append(Node(3, 9))
-LL.remove(LL.findNode(2))
-LL.append(Node(-1, 1))
-LL.remove(LL.findNode(-1))
-LL.print()
-
-	
-
-	
-#for i in range(LENGTH):
-	#print("key = " + str(a[i].key) + ", value = " + str(a[i].value))
