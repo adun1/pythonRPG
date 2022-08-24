@@ -36,17 +36,17 @@ class LinkedList:
 	def remove(self, item):
 		#case front item (covers only item and head)
 		if item == self.head:
-			head = head.getNext()
+			self.head = self.head.getNext()
 			return	
 		current = self.head
-		prev
-		after
-		delNode
+		#prev
+		#after
+		#delNode
 		while current.getNext() is not None:
 			prev = current
 			delNode = current.getNext()
 			after = current.getNext().getNext()
-			if delNode() == item:
+			if delNode == item:
 				break;
 			current = current.getNext()
 		#case not found
@@ -55,6 +55,15 @@ class LinkedList:
 		#found
 		prev.setNext(after)
 		delNode = None
+		
+	def findNode(self, key):
+		current = self.head
+		while current is not None:
+			if current.key == key:
+				return current
+			current = current.getNext()
+		return None
+	
 			
 
 LENGTH = 3		
@@ -65,6 +74,14 @@ a = []
 for i in range(LENGTH):
 	#a.append(Node(i, i*i))
 	LL.append(Node(i, i*i))
+
+#debugging
+LL.print()
+LL.remove(LL.findNode(0))
+LL.append(Node(3, 9))
+LL.remove(LL.findNode(2))
+LL.append(Node(-1, 1))
+LL.remove(LL.findNode(-1))
 LL.print()
 
 	
